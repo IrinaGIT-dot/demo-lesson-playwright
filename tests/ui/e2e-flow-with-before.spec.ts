@@ -61,8 +61,8 @@ test('Errors when incorrect name and phone number are used', async ({}) => {
 test('Login, create order and show order status', async ({ page }) => {
   const orderCreationPage = await authPage.signIn(USERNAME, PASSWORD)
   await orderCreationPage.statusButton.click()
-  await orderCreationPage.orderStatusInputField.fill('1941')
-  await orderCreationPage.orderStatusSubmitButton.click()
+  await orderCreationPage.statusInputField.fill('1941')
+  await orderCreationPage.statusSubmitButton.click()
   const orderFoundPage =  new OrderFoundPage(page)
   await expect.soft(orderFoundPage.statusButton).toBeVisible()
 })

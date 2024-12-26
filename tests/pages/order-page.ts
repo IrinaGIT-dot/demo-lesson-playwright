@@ -21,6 +21,6 @@ export class OrderPage extends AuthPage{
   }
 
   async orderFoundPage() {
-    return new OrderFoundPage(page)
+    return new OrderFoundPage(this.page)
   }
 }
